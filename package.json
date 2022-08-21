@@ -1,0 +1,31 @@
+{
+  "name": "havit",
+  "description": "Have It",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:9000",
+  "engines": {
+    "node": "^15.10.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "moment-timezone": "^0.5.33",
+    "mongoose": "^5.12.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "web-vitals": "^1.1.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app",
+    "frontend": "npm start --prefix frontend",
+    "frontend-install": "npm install --prefix frontend",
+    "dev": "concurrently \"npm run frontend\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  }
+}
