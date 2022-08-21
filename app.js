@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const routes = {
-	"/items/": require('./api/routes/items'),
+	// "/items/": require('./api/routes/items'),
 }
 
 const port = process.env.PORT || 9000;
