@@ -5,13 +5,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Logo from '../images/havit.png';
 
 const Navbarg = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#"><img
-              src="/frontend/src/havit.png"
+              src={Logo}
               height="30"
               className="d-inline-block align-top"
               alt="Havit logo"

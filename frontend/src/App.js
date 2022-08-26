@@ -7,10 +7,10 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <Container fluid>
         <Navbarg />
+        <Container fluid>
         <HomePage/>
-      </Container>
+        </Container>
     </div>
   );
 }
