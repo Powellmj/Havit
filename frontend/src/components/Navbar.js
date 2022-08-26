@@ -8,9 +8,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navbarg = () => {
   return (
-    <Navbar bg="dark" expand="lg">
+    <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Havit</Navbar.Brand>
+        <Navbar.Brand href="#"><img
+              src="/havit.png"
+              height="30"
+              className="d-inline-block align-top"
+              alt="Havit logo"
+            /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
