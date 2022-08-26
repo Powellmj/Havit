@@ -11,7 +11,7 @@ const Navbarg = () => {
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#"><img
-              src="/havit.png"
+              src="/frontend/src/havit.png"
               height="30"
               className="d-inline-block align-top"
               alt="Havit logo"
