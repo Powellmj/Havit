@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -5,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Navbar() {
+const Navbarg = () => {
   return (
     <Navbar bg="dark" expand="lg">
       <Container fluid>
@@ -48,4 +49,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbarg
