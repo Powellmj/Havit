@@ -4,6 +4,7 @@ function HomePage() {
 
   return(
     <>
+      Hello World
     </>
   );
 }
