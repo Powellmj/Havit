@@ -1,8 +1,13 @@
 import React from 'react';
 import { useThemeContext } from "../hooks/useThemeContext";
+import { handleOpen } from '../actions/sidebar_actions'
+import { useDispatch } from 'react-redux'
+import HabitForm from './HabitForm';
+
 export default function MiscellaneousCheese() {
   // define button style by darkMode
   const { darkMode } = useThemeContext();
+  const dispatch = useDispatch()
   const btnVariant = darkMode ? "outline-highlight" : "primary";
   const shadow = darkMode ? "shadow" : "shadow-sm";
 
@@ -34,7 +39,7 @@ export default function MiscellaneousCheese() {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <button className={`btn btn-${btnVariant}`}>Cheese me up</button>
+          <button onClick={() => dispatch(handleOpen(HabitForm))} className={`btn btn-${btnVariant}`}>Cheese me up</button>
         </div>
       </div>
     </div>

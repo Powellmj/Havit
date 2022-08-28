@@ -4,7 +4,7 @@ function HomePage() {
 
   return(
     <>
-      Hello World
+      Hello Dumper
     </>
   );
 }

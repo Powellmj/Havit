@@ -5,6 +5,6 @@ export const handleClose = () => dispatch => (
   dispatch({ type: HIDE })
 )
 
-export const handleOpen = () => dispatch => (
-  dispatch({ type: SHOW })
+export const handleOpen = (component) => dispatch => (
+  dispatch({ type: SHOW, component })
 )
