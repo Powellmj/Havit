@@ -17,7 +17,6 @@ function App() {
         <HomePage/>
           <ThemeSwitch />
           <MiscellaneousCheese />
-        
         </Container>
         </ThemeProvider>
     </div>

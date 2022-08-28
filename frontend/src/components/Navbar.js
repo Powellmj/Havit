@@ -4,7 +4,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../images/havit.png';
+import { handleClose, handleOpen } from '../actions/sidebar_actions'
+import { connect, useDispatch, useSelector } from 'react-redux'
+
+
 const Navbarg = () => {
+  const dispatch = useDispatch()
+  const visible = useSelector(state => state.ui.Sidebar.visible);
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -32,7 +39,9 @@ const Navbarg = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More</Nav.Link>
+            {!visible ?
+            <button onClick={() => dispatch(handleOpen())} type="button" class="btn btn-light">Open</button> :
+            <button onClick={() => dispatch(handleClose())} type="button" class="btn btn-info">Close</button>}
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -40,4 +49,10 @@ const Navbarg = () => {
   );
 }
 
-export default Navbarg
+const mapStateToProps = state => {
+  return {
+    visible: state.ui.Sidebar.visible
+  }
+}
+
+export default connect(mapStateToProps, null)(Navbarg);

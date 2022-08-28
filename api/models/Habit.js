@@ -1,14 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ItemSchema = new Schema({
+const HabitSchema = new Schema({
   name: {
     type: String,
   },
-  notes: {
-    type: String,
-  },
-  quantity: {
+  title: {
     type: String,
   },
   unit: {
@@ -17,16 +14,15 @@ const ItemSchema = new Schema({
   visible: {
     type: Boolean, default: true
   },
-  expiration: {
-    type: String,
+  successes: { 
+    type: Array, default: [] 
   },
   expiration_date: {
     type: Date,
   },
-  created_at:
-  {
+  created_at: {
     type: Date, default: Date.now
   }
 });
 
-module.exports = Item = mongoose.model('Item', ItemSchema);
+module.exports = Habit = mongoose.model('Habit', HabitSchema);
