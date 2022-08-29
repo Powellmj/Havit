@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
+import habits from './habits_reducer'
 
-const RootReducer = combineReducers({
+const entities_reducer = combineReducers({
+  habits
 });
 
-export default RootReducer;
+export default entities_reducer;

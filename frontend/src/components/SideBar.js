@@ -1,16 +1,13 @@
 import React from 'react';
-import { connect, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-const Sidebar = () => {
-  const visible = useSelector(state => state.ui.Sidebar.visible);
-  const displayedComponent = 
-    useSelector(state => state.ui.Sidebar.component) ||
-    defaultSideBarComponent;
+const Sidebar = ({children}) => {
+  const visible = useSelector(state => state.ui.sidebar.visible);
 
   return (
     visible && (
-      <div class="sidebar d-flex flex-column flex-shrink-0 p-3 bg-light">
-        { displayedComponent() }
+      <div className="sidebar d-flex flex-column flex-shrink-0 p-3 bg-light">
+          {children || defaultSideBarComponent() }
       </div>
     )
   );
@@ -19,10 +16,10 @@ const Sidebar = () => {
   const defaultSideBarComponent = () => {
     return (
       <div>
-        <span class="fs-4">Sidebar</span>
+        <span className="fs-4">Sidebar</span>
         <hr />
-        <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item">
+        <ul className="nav nav-pills flex-column mb-auto">
+          <li className="nav-item">
             Home
           </li>
           <li>
@@ -39,8 +36,8 @@ const Sidebar = () => {
           </li>
         </ul>
         <hr />
-        <div class="dropdown">
-          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+        <div className="dropdown">
+          <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
           </ul>
         </div>
       </div>

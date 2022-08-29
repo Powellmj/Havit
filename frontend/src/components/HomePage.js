@@ -1,10 +1,21 @@
 import React from 'react';
+import Sidebar from './SideBar';
+import { useSelector } from 'react-redux'
+import HabitIndex from './HabitIndex'
+import ThemeSwitch from "./ThemeSwitch";
+import MiscellaneousCheese from "./MiscellaneousCheese";
 
 function HomePage() {
-
+  let children = useSelector(state => state.ui.sidebar.component)
+  if (children) {
+    children = React.createElement(children)
+  }
   return(
     <>
-      Hello Dumper
+      <Sidebar children={children}/>
+      <ThemeSwitch />
+      <MiscellaneousCheese />
+      <HabitIndex/>
     </>
   );
 }

@@ -1,4 +1,4 @@
-const RootReducer = (state = { visible: false }, action) => {
+const sidebar_reducer = (state = { visible: false }, action) => {
   switch (action.type) {
     case "SHOW":
       return { ...state, visible: true, component: action.component };
@@ -9,4 +9,4 @@ const RootReducer = (state = { visible: false }, action) => {
   }
 };
 
-export default RootReducer;
+export default sidebar_reducer;

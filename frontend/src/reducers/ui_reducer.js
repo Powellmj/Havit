@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import Sidebar from './sidebar_reducer';
+import sidebar from './sidebar_reducer';
 
-const RootReducer = combineReducers({
-  Sidebar
+const ui_reducer = combineReducers({
+  sidebar
 });
 
-export default RootReducer;
+export default ui_reducer;

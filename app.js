@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const routes = {
-	// "/items/": require('./api/routes/items'),
+	"/habits/": require('./api/routes/habits'),
 }
 
 const port = process.env.PORT || 9000;

@@ -5,20 +5,14 @@ const HabitSchema = new Schema({
   name: {
     type: String,
   },
-  title: {
+  description: {
     type: String,
   },
-  unit: {
-    type: String,
-  },
-  visible: {
-    type: Boolean, default: true
-  },
-  successes: { 
+  days_of_week: {
     type: Array, default: [] 
   },
-  expiration_date: {
-    type: Date,
+  time_of_day: {
+    type: String,
   },
   created_at: {
     type: Date, default: Date.now

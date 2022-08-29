@@ -5,12 +5,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../images/havit.png';
 import { handleClose, handleOpen } from '../actions/sidebar_actions'
-import { connect, useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 const Navbarg = () => {
-  const dispatch = useDispatch()
-  const visible = useSelector(state => state.ui.Sidebar.visible);
+  const dispatch = useDispatch();
+  const visible = useSelector(state => state.ui.sidebar.visible);
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -29,10 +29,4 @@ const Navbarg = () => {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    visible: state.ui.Sidebar.visible
-  }
-}
-
-export default connect(mapStateToProps, null)(Navbarg);
+export default Navbarg;
