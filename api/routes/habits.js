@@ -6,8 +6,8 @@ router.post("/", (req, res) => {
     const newHabit = new Habit({
       name: req.body.name,
       description: req.body.description,
-      days_of_week: req.body.daysOfWeek,
-      time_of_day: req.body.timeOfDay,
+      days_of_week: req.body.days_of_week,
+      time_of_day: req.body.time_of_day,
     });
     newHabit.save().then(habit => res.json(habit));
     return res

@@ -25,7 +25,6 @@ const HabitForm = (props) => {
     }
   }
 
-
   const renderDaysOfWeek = () => {
     return ["S", "M", "T", "W", "TH", "F", "SA"].map((day) => {
       return (

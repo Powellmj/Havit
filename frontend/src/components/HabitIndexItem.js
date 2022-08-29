@@ -14,7 +14,7 @@ function HabitIndexItem(props) {
             <div className="row row-cols-2">
               <div className="col-sm-8">{name}</div>
               <div className="btn-group col-sm-4" role="group">
-                <button onClick={() => dispatch(handleOpen(<HabitForm {...props}/>))} type="button" className="btn btn-info">Edit</button>
+                <button onClick={() => dispatch(handleOpen(<HabitForm {...props} />))} type="button" className="btn btn-info">Edit</button>
                 <button onClick={() => dispatch(deleteHabit(_id))} type="button" className="btn btn-danger">Delete</button>
               </div>
             </div>
