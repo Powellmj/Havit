@@ -7,9 +7,7 @@ import MiscellaneousCheese from "./MiscellaneousCheese";
 
 function HomePage() {
   let children = useSelector(state => state.ui.sidebar.component)
-  if (children) {
-    children = React.createElement(children)
-  }
+
   return(
     <>
       <Sidebar children={children}/>

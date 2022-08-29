@@ -8,10 +8,10 @@ const habits_reducer = (state = initialState, action) => {
     case RECEIVE_ALL_HABITS:
       return Object.assign({}, state, action.habits);
     case RECEIVE_HABIT:
-      return Object.assign({}, state, { [action.habit.name]: action.habit })
+      return Object.assign({}, state, { [action.habit._id]: action.habit })
     case REMOVE_HABIT:
       let newState = Object.assign({}, state)
-      delete newState[action.name]
+      delete newState[action._id]
       return newState
     default:
       return state;

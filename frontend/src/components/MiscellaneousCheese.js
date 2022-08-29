@@ -27,7 +27,7 @@ export default function MiscellaneousCheese() {
           <p className="card-text">
             Become a better you! Click "Cheese me up" to create a new habit.
           </p>
-          <button onClick={() => dispatch(handleOpen(HabitForm))} className={`btn btn-${btnVariant}`}>Cheese me up</button>
+          <button onClick={() => dispatch(handleOpen(<HabitForm />))} className={`btn btn-${btnVariant}`}>Cheese me up</button>
         </div>
       </div>
     </div>

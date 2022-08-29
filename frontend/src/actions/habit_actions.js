@@ -14,9 +14,9 @@ export const receiveAllHabits = habits => ({
   habits
 });
 
-export const removeHabit = name => ({
+export const removeHabit = _id => ({
   type: REMOVE_HABIT,
-  name
+  _id
 });
 
 export const requestHabit = habitId => dispatch => APIUtil.fetchHabit(habitId)
@@ -28,7 +28,7 @@ export const requestAllHabits = () => dispatch => APIUtil.fetchAllHabits()
   .then(habits => {
     let habitsObj = {}
     habits.data.forEach(habit => {
-      habitsObj[habit.name] = habit
+      habitsObj[habit._id] = habit
     })
     dispatch(receiveAllHabits(habitsObj))
   })
@@ -73,8 +73,8 @@ export const updateManyHabits = updateObj => dispatch => (
   )
 )
 
-export const deleteHabit = (habitId, name) => dispatch => {
-  APIUtil.deleteHabit(habitId).then(response => {
-    dispatch(receiveHabit(response.data))
+export const deleteHabit = (_id) => dispatch => {
+  APIUtil.deleteHabit(_id).then(response => {
+    dispatch(removeHabit(_id))
   });
 }
